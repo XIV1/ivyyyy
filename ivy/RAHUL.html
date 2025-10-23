@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ivy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>For U😢</h1>
+    <p>Wani, get well soon, i don’t want you getting sick again. You’re allowed to study, but please don’t forget to take care of yourself. Don’t push too hard. Eat well, rest plenty… promise me, okay?</p>
+    <p>Even though you turned on DND, I’m still worried about you. I hope everything’s okay. Maybe you just needed some quiet time and didn’t want to be spammed and that’s totally fine. I understand.</p>
+    <img src="7825768944_94920925118034_1760366174084.png" alt="Cute Love Illustration">
+    <blockquote>"SORY KALAU ALAYYYY WKWKWKWKWK"</blockquote>
+    <p>Hope you feel better soon, Waniii… I miss playing Roblox with you! (maybe someday you’ll surprise me and open your mic, hehehehehehhe).</p>
+    <button id="loveButton">SPAM JEE!</button>
+  <audio id="bg-music" autoplay>
+  <source src="bestpart_danielcaesar.mp3" type="audio/mp3">
+  Browser kamu nggak support audio 😢
+</audio>
+
+<script>
+  window.addEventListener('load', function() {
+    const audio = document.getElementById("bg-music");
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Autoplay berhasil
+      }).catch(error => {
+        console.log("Autoplay diblokir oleh browser");
+      });
+    }
+  });
+</script>
+<script>
+  function revealOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 50) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+<script>
+  function spawnHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "💖";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+  }
+
+  window.addEventListener("scroll", () => {
+    if (Math.random() < 0.3) spawnHeart();
+  });
+
+  window.addEventListener("touchmove", () => {
+    if (Math.random() < 0.3) spawnHeart();
+  });
+</script>
+<script>
+  const btn = document.getElementById("loveButton");
+  btn.addEventListener("click", () => {
+    btn.classList.add("clicked");
+    setTimeout(() => btn.classList.remove("clicked"), 600);
+
+    // Tambahan efek 💖 terbang
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "💖";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+  });
+</script>
+
+    <footer>from aku (duke, ivory, davin)</footer>
+    <h2>NI FOTO BIAR BISA DI SCROLL HEHEHEHE</h2>
+<div class="gallery">
+  <img src="7825768944_78308761560907_1760367472304.png"class="fade-out">
+  <img src="7825768944_78308761560907_1760367962414.png"class="fade-in">
+  <img src="7825768944_94920925118034_1760366082706.png"class="fade-out">
+  <img src="7825768944_133987244881814_1760368920815.png"class="fade-in">
+</div>
+</div>
+  </div>
+</body>
+</html>
